@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio and Video Upload Interface</title>
+</head>
+<body>
+	<h1>Audio and Video Upload Interface</h1>
+	<form id="uploadForm">
+		<label for="audioFile">Upload Audio File:</label>
+		<input type="file" id="audioFile" accept="audio/*">
+		<br>
+		<label for="videoFile">Upload Video File:</label>
+		<input type="file" id="videoFile" accept="video/*">
+		<br>
+		<button type="submit">Upload</button>
+	</form>
+
+	<hr>
+
+	<h2>Transcriptions</h2>
+	<div id="transcriptions">
+		<!-- Display transcriptions here -->
+	</div>
+
+	<hr>
+
+	<h2>Notes</h2>
+	<textarea id="notes" rows="10" cols="50"></textarea>
+
+	<hr>
+
+	<h2>Mind Map</h2>
+	<div id="mindMap">
+		<!-- Display mind map here -->
+	</div>
+
+	<script>
+		// Add event listener to upload form
+		document.getElementById("uploadForm").addEventListener("submit", function(event) {
+			event.preventDefault();
+			uploadFiles();
+		});
+
+		// Function to handle file uploads
+		function uploadFiles() {
+			// Get selected files
+			var audioFile = document.getElementById("audioFile").files[0];
+			var videoFile = document.getElementById("videoFile").files[0];
+
+			// TODO: Upload files to server and transcribe audio file
+
+			// TODO: Display transcriptions in "transcriptions" div
+
+			// TODO: Save notes to local storage
+
+			// TODO: Generate mind map based on transcriptions and notes and display in "mindMap" div
+		}
+	</script>
+</body>
+</html>
